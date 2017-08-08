@@ -5,7 +5,7 @@ ASSETS_DIR = assets
 VENDOR_DIR = $(ASSETS_DIR)/vendor/
 JEKYLL := $(BUNDLE) exec jekyll
 HTMLPROOF := $(BUNDLE) exec htmlproofer
-DOMAIN = marcanuy.github.io
+DOMAIN = shawnstephens.github.io
 PROJECT_DEPS := Gemfile package.json
 
 .PHONY: all clean install update
