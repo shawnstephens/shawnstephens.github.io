@@ -2,6 +2,7 @@
 .sass-cache
 .jekyll-metadata
 dist
+.DS_Store
 node_modules
 .bundle/
 vendor/
