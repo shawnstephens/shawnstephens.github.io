@@ -15,4 +15,4 @@ JEKYLL_ENV=production bundle exec jekyll build --destination dist
 cd dist && git add --all && git commit -m "Publishing to gh-pages" && git push origin master
 
 # publish
-git push upstream master
+git push origin master
