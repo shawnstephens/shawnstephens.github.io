@@ -1,6 +1,7 @@
 *~
 .sass-cache
 .jekyll-metadata
+dist
 node_modules
 .bundle/
 vendor/
