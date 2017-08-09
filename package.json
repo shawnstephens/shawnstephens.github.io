@@ -9,5 +9,11 @@
   "main": "index.js",
   "repository": "git@github.com:shawnstephens/shawnstephens.github.io.git",
   "author": "Shawn Stephens <shawn@motivatedcompany.com>",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "scripts": {
+    "deploy": "gh-pages -d dist -b master"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
+  }
 }
