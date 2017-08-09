@@ -12,7 +12,7 @@ git clone .git --branch master dist
 make build
 
 # commit the changes in the clone and push them back to the local gh-pages branch
-cd dist && git add --all && git commit -m "Publishing to master" && git push origin master
+cd dist && git add --all && git commit -m "Publishing to master" && git push --force origin master
 
 # publish
 git push origin master
