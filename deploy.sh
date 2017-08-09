@@ -15,4 +15,4 @@ make build
 cd dist && git add --all && git commit -m "Publishing to master" && git push --force origin master
 
 # publish
-git push origin master
+git push upstream master
