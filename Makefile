@@ -18,7 +18,7 @@ check:
 		--http-status-ignore 999 \
 		--internal-domains $(DOMAIN),localhost:4000 \
 		--assume-extension \
-		_site
+		dist
 
 install: $(PROJECT_DEPS)
 	$(BUNDLE) install --path vendor/bundler
@@ -37,12 +37,12 @@ include-yarn-deps:
 	cp node_modules/bootstrap/dist/js/bootstrap.min.js $(VENDOR_DIR)
 
 build: clean install include-yarn-deps
-	$(JEKYLL) build
+	JEKYLL_ENV=production $(JEKYLL) build --destination dist
 
 serve: clean install include-yarn-deps
 	JEKYLL_ENV=production $(JEKYLL) serve
 clean:
-	rm -fr _site/
+	rm -fr dist/
 	rm -fr $(VENDOR_DIR) #from yarn
 	rm -fr $(ASSETS_DIR)/fonts #fontawesome dependency
 	rm -fr .sass_cache

@@ -9,7 +9,7 @@ mkdir dist
 # clone gh-pages branch from the local repo into a repo located within "dist"
 git clone .git --branch master dist
 
-JEKYLL_ENV=production bundle exec jekyll build --destination dist
+make build
 
 # commit the changes in the clone and push them back to the local gh-pages branch
 cd dist && git add --all && git commit -m "Publishing to gh-pages" && git push origin master
