@@ -3,7 +3,7 @@
 .jekyll-metadata
 dist
 .DS_Store
-node_modules
+node_modules/
 .bundle/
 vendor/
 assets/fonts

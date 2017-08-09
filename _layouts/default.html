@@ -1,12 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
     <head>
-	     <link rel="stylesheet" href="/assets/main.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{{'/assets/main.css' | absolute_url}}">
+	<link rel="stylesheet" href="{{'/assets/vendor/font-awesome.min.css' | absolute_url}}">
+	{% include alternate.html %}
+	{%comment%} jekyll-seo-tag plugin with disabled title to make them localized {%endcomment%}
+	{% seo title=false %}
+	{% assign site_title = site.data.locales[page.lang].site.title %}
+	<title>{{page.title}}{% unless page.title contains site_title%} | {{site_title}}{% endunless %}</title>
     </head>
     <body>
-	     {{content}}
-	      <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
-	      <script src="{{'/node_modules/tether/dist/js/tether.min.js' | prepend: site.baseurl}}"></script>
-	      <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+
+	<div class="container">
+	    <small>Site name: {{site.data.locales[page.lang].site.title}}</small>
+
+	    {% include mainnav.html %}
+
+	    {% include breadcrumbs.html path=page.path title=page.title %}
+
+	    <h1>{{page.title}}</h1>
+
+	    <hr>
+
+	    {{content}}
+
+	    <hr>
+
+	    <div>
+		<h2>{{site.data.locales[page.lang].site.all_posts}}</h2>
+		<ul>
+		    {% for item in site.posts %}
+		    <li>
+			{{item.url}}
+			<a href="{{item.url | absolute_url}}" hreflang="{{item.lang}}">{{ item.title }} <strong>[{{item.lang}}]</strong></a>
+		    </li>
+		    {% endfor %}
+		</ul>
+	    </div>
+
+	    <div>
+		<h2>{{site.data.locales[page.lang].site.all_pages}}</h2>
+		<ul>
+		    {% assign pages = site.pages | where_exp: "item", "item.title != nil" %}
+		    {% for item in pages %}
+		    <li>
+			<a href="{{item.url | absolute_url}}" hreflang="{{item.lang}}">{{ item.title }} <strong>[{{item.lang}}]</strong></a>
+		    </li>
+		    {% endfor %}
+		</ul>
+	    </div>
+
+	    <div>
+		<h2>{{site.data.locales[page.lang].site.no_title_pages}}</h2>
+		<ul>
+		    {% assign pages = site.pages | where_exp:"item", "item.title == nil" %}
+		    {% for item in pages %}
+		    <li>
+			<a href="{{item.url | absolute_url}}" hreflang="{{item.lang}}">{{ item.path }} <strong>[{{item.lang}}]</strong></a>
+		    </li>
+		    {% endfor %}
+		</ul>
+	    </div>
+
+	</div><!-- /.container -->
+
+	<footer class="text-center">
+	    <div>
+		<h3>{{site.data.locales[page.lang].site.nav_menu}}</h3>
+		<div>{% include lang_nav.html %}</div>
+	    </div>
+	    <p>{{site.data.locales[page.lang].site.footer_line}}</p>
+
+            <div>
+		<a href="https://github.com/marcanuy/jekyll-skeleton/edit/master/{{ page.path }}" class="text-success">
+		    <i class="fa fa-pencil"></i> &nbsp;{{site.data.locales[page.lang].site.improve}}
+		</a>
+	    </div>
+
+	</footer>
+
+
+	<script src="{{'/assets/vendor/jquery.min.js' | absolute_url}}"></script>
+	<script src="{{'/assets/vendor/tether.min.js' | absolute_url}}"></script>
+	<script src="{{'/assets/vendor/bootstrap.min.js' | absolute_url}}"></script>
     </body>
 </html>
