@@ -1,0 +1,40 @@
+<footer class="site-footer">
+
+  <div class="container-fluid mt-5">
+
+    <hr></hr>
+
+    <h6 class="footer-heading text-center">You can find me at:</h2>
+
+
+    <ul class="list-inline contact-list center-block text-center">
+      <!-- <li>
+        {% if site.author %}
+          {{ site.author | escape }}
+        {% else %}
+          {{ site.title | escape }}
+        {% endif %}
+        </li> -->
+
+        {% if site.email %}
+        <li class="list-inline-item">
+          <a href="mailto:{{ site.email }}"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </li>
+        {% endif %}
+        {% if site.github_username %}
+        <li class="list-inline-item">
+          {% include icon-github.html username=site.github_username %}
+        </li>
+        {% endif %}
+        {% if site.twitter_username %}
+        <li class="list-inline-item">
+          {% include icon-twitter.html username=site.twitter_username %}
+        </li>
+        {% endif %}
+
+    </ul>
+
+    <p class="text-center">&copy; {{ 'now' | date: "%Y" }} Shawn Stephens</p>
+    </div>
+
+</footer>

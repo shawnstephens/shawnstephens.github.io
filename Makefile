@@ -35,12 +35,13 @@ include-yarn-deps:
 	cp node_modules/jquery/dist/jquery.min.js $(VENDOR_DIR)
 	cp node_modules/tether/dist/js/tether.min.js $(VENDOR_DIR)
 	cp node_modules/bootstrap/dist/js/bootstrap.min.js $(VENDOR_DIR)
+	cp node_modules/popper.js/dist/umd/popper*min* $(VENDOR_DIR)
 
 build: clean install include-yarn-deps
 	JEKYLL_ENV=production $(JEKYLL) build --destination dist
 
 serve: clean install include-yarn-deps
-	JEKYLL_ENV=production $(JEKYLL) serve
+	JEKYLL_ENV=production $(JEKYLL) serve -H 0.0.0.0
 clean:
 	rm -fr dist/
 	rm -fr $(VENDOR_DIR) #from yarn

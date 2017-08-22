@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+  {% assign post = site.posts.first %}
+  <div class="jumbotron jumbotron-first-post">
+    <div class="container text-light text-center mt-5">
+      <h1 class="display-4">{{ post.title | escape }}</h1>
+      <p>
+        <a class="btn btn-lg btn-primary" href="{{ post.url | relative_url }}" role="button">Read</a>
+      </p>
+      <p>
+        <small>
+          <span class="border border-white rounded p-1">Most Recent Post</span>
+        </small>
+      </p>
+    </div>
+  </div>
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+  <div class="container marketing">
+      <!-- <h1 class="display-3 text-center mb-5 mt-5">
+        Previous Posts
+      </h1> -->
+      <div class="text-center my-5">
+        <span class="border border-dark rounded p-1 ">
+          <small class="font-weight-lightest">Previous Posts</small>
+        </span>
+      </div>
+
+    </p>
+    <!-- Three columns of text below the carousel -->
+    <!-- <div class="row">
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+        <h2>Heading</h2>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div> -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <!-- <hr class="featurette-divider"> -->
+    {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+    {% for post in site.posts offset:1 %}
+    <div class="row featurette">
+      <div class="col-md-7 {% cycle '', 'order-md-2' %}">
+        <h2 class="featurette-heading">
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+        </h2>
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {% if post.excerpt %}
+          <p class="lead">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+        {% endif %}
+      </div>
+      <div class="col-md-5 {% cycle '', 'order-md-1' %}">
+        <img class="featurette-image img-fluid mx-auto" src="{{ post.post_list_image | prepend: site.baseurl }}" alt="Post Image">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    {% endfor %}
+
+    <!-- <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      </div>
+    </div> -->
+
+    <!-- <hr class="featurette-divider"> -->
+
+    <!-- /END THE FEATURETTES -->
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+
+
+
+
+</div>

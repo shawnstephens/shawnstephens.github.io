@@ -11,4 +11,5 @@ group :jekyll_plugins do
   gem 'jekyll-toc'
   gem 'html-proofer'
   gem 'jekyll-redirect-from'
+  gem 'jekyll-autoprefixer'
 end
