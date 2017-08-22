@@ -112,7 +112,7 @@ body {
 }
 
 .jumbotron-first-post {
-  background: url({{ '/assets/images/pexels-photo-169573-1.jpg' | prepend: site.baseurl }}) no-repeat center center;
+  background: url('{{ '/assets/images/pexels-photo-169573-1.jpg' | prepend: site.baseurl }}') no-repeat center center;
   background-size: cover;
   height: 400px;
 }
