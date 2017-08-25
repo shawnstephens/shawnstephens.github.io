@@ -7,3 +7,4 @@ node_modules/
 .bundle/
 vendor/
 assets/fonts
+_site

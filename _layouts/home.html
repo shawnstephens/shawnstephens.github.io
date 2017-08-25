@@ -3,8 +3,8 @@ layout: default
 ---
 
   {% assign post = site.posts.first %}
-  <div class="jumbotron jumbotron-first-post">
-    <div class="container text-light text-center mt-5">
+  <div class="jumbotron jumbotron-header jumbotron-blog-header d-flex align-items-center">
+    <div class="container text-light text-center">
       <h1 class="display-4">{{ post.title | escape }}</h1>
       <p>
         <a class="btn btn-lg btn-primary" href="{{ post.url | relative_url }}" role="button">Read</a>

@@ -111,8 +111,20 @@ body {
     color: #FFF;
 }
 
-.jumbotron-first-post {
+.jumbotron-blog-header {
   background: url('{{ '/assets/images/pexels-photo-169573-1.jpg' | prepend: site.baseurl }}') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+}
+
+.jumbotron-post-header {
+  background: url('{{ '/assets/images/blog-post.jpg' | prepend: site.baseurl }}') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+}
+
+.jumbotron-about-header {
+  background: url('{{ '/assets/images/about-header.jpg' | prepend: site.baseurl }}') no-repeat center center;
   background-size: cover;
   height: 400px;
 }
