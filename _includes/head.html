@@ -21,7 +21,7 @@
 
   {% if page.post_list_image %}
     <meta name="twitter:image"
-      content="{{ page.post_list_image }}">
+      content="{{ page.post_list_image | absolute_url }}">
   {% else %}
     <meta name="twitter:image"
       content="{{ '/assets/images/pexels-photo-169573-1.jpg' | absolute_url }}">
