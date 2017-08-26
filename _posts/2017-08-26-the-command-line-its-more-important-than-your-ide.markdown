@@ -2,7 +2,7 @@
 layout: post
 title:  "The Command Line"
 subtitle: "It's More Important than Your IDE"
-date:   2017-08-25 7:00:00 -0500
+date:   2017-08-26 10:00:00 -0500
 categories: ruby
 post_list_image: /assets/images/command-line.jpg
 ---
