@@ -5,15 +5,19 @@ layout: default
   {% assign post = site.posts.first %}
   <div class="jumbotron jumbotron-header jumbotron-blog-header d-flex align-items-center">
     <div class="container text-light text-center">
-      <h1 class="display-4">{{ post.title | escape }}</h1>
-      <p>
+      <h1 class="display-4">All Posts</h1>
+      <!-- <h1 class="display-4">{{ post.title | escape }}</h1>
+      {% if post.subtitle %}
+        <h2 class="display-5">{{ post.subtitle | escape }}</h2>
+      {% endif %} -->
+      <!-- <p>
         <a class="btn btn-lg btn-primary" href="{{ post.url | relative_url }}" role="button">Read</a>
       </p>
       <p>
         <small>
           <span class="border border-white rounded p-1">Most Recent Post</span>
         </small>
-      </p>
+      </p> -->
     </div>
   </div>
 
@@ -22,17 +26,16 @@ layout: default
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
 
-  <div class="container marketing">
+  <div class="container marketing pt-5">
       <!-- <h1 class="display-3 text-center mb-5 mt-5">
         Previous Posts
       </h1> -->
-      <div class="text-center my-5">
+      <!-- <div class="text-center my-5">
         <span class="border border-dark rounded p-1 ">
           <small class="font-weight-lightest">Previous Posts</small>
         </span>
-      </div>
+      </div> -->
 
-    </p>
     <!-- Three columns of text below the carousel -->
     <!-- <div class="row">
       <div class="col-lg-4">
@@ -54,19 +57,22 @@ layout: default
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
     </div> -->
-
-
     <!-- START THE FEATURETTES -->
 
     <!-- <hr class="featurette-divider"> -->
     {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
-    {% for post in site.posts offset:1 %}
+    {% for post in site.posts %}
     <div class="row featurette">
       <div class="col-md-7 {% cycle '', 'order-md-2' %}">
         <h2 class="featurette-heading">
             <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
+              {% if post.excerpt %}
+                <br>
+                <small class="text-muted">{{ post.subtitle | escape }}</small>
+              {% endif %}
             </a>
+
         </h2>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         {% if post.excerpt %}

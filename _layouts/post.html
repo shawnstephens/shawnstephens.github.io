@@ -5,6 +5,9 @@ layout: default
 <div class="jumbotron jumbotron-header jumbotron-post-header d-flex align-items-center">
   <div class="container text-light text-center">
     <h1 class="display-4">{{ page.title | escape }}</h1>
+    {% if page.subtitle %}
+      <h2 class="display-5">{{ page.subtitle | escape }}</h2>
+    {% endif %}
   </div>
 </div>
 
