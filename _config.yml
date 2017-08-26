@@ -15,7 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Shawn Stephens
 email: shawn@motivatedcompany.com
-description: > # Thoughts on Technology and Software Development
+description: >
+  Thoughts on Technology and Software Development 
   from Shawn Stephens
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
