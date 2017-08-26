@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: http://shawnstephens.me/sitemap.xml

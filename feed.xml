@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-08-08T19:39:54-05:00</updated><id>/</id></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://shawnstephens.me/feed.xml" rel="self" type="application/atom+xml" /><link href="http://shawnstephens.me/" rel="alternate" type="text/html" /><updated>2017-08-26T11:16:21-05:00</updated><id>http://shawnstephens.me/</id><title type="html">Shawn Stephens</title><subtitle>Thoughts on Technology and Software Development from Shawn Stephens
+</subtitle><entry><title type="html">The Command Line</title><link href="http://shawnstephens.me/ruby/2017/08/26/the-command-line-its-more-important-than-your-ide.html" rel="alternate" type="text/html" title="The Command Line" /><published>2017-08-26T10:00:00-05:00</published><updated>2017-08-26T10:00:00-05:00</updated><id>http://shawnstephens.me/ruby/2017/08/26/the-command-line-its-more-important-than-your-ide</id><content type="html" xml:base="http://shawnstephens.me/ruby/2017/08/26/the-command-line-its-more-important-than-your-ide.html">&lt;p&gt;Some platforms provide IDEs so nice that no one would consider using anything else. Open source technologies such as Ruby, Node.js, Go, and others have no killer IDE. In this post I present why the command line should be prioritized over any IDE.&lt;/p&gt;
+
+&lt;h1 id=&quot;platform-concerns&quot;&gt;Platform Concerns&lt;/h1&gt;
+
+&lt;p&gt;The programming language and platform have a strong influence on IDE selection. Most development teams are going to use Visual Studio when developing .NET applications. Likewise, MacOS or iOS projects are very likely to use Xcode. Eclipse is a free standard in Java. Commercially produced platforms such as .NET or Apple SDKs usually come with IDEs that are provided to help assist with visual application development and to appeal to developers that may want to try the platform.&lt;/p&gt;
+
+&lt;p&gt;Teams using non-commercial languages such as Ruby will be drastically different. There isn’t a commercial entity directly driving the language and its tools. Developing an IDE takes a considerable amount of resources. Furthermore, Ruby, is dynamically typed, and there isn’t a large focus on refactoring tools as there is in Java or .NET. While IDEs like &lt;a href=&quot;https://www.jetbrains.com/ruby&quot; target=&quot;_blank&quot;&gt;Rubymine&lt;/a&gt; exist, they don’t have a &lt;a href=&quot;https://stackshare.io/stackups/atom-vs-rubymine&quot; target=&quot;_blank&quot;&gt;huge following&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;open-source-is-different&quot;&gt;Open Source is Different&lt;/h1&gt;
+
+&lt;p&gt;In these largely open-source platforms, the command line reigns supreme. Everything you do in Rails, Rake, Bundler, minus editing files or rendering a page in a browser, is done via commands on the command line. The platform has an inherent standard that any development tool should be executable from the command line.&lt;/p&gt;
+
+&lt;p&gt;My statements might upset .NET or Xcode developers as they made considerable leaps over their earlier solutions. The difference exists because the respective IDEs are a developer’s first experience with C# or Swift, and it is easy to quickly become dependent upon the build tools built into the IDE.&lt;/p&gt;
+
+&lt;p&gt;I can remember moving Java projects from Eclipse based IDE packaging to solely ant based automated builds. Some developers at the time simply didn’t want to give up their quick IDE based incremental builds, so we often had to support both until ant and maven plugins became prevalent.&lt;/p&gt;
+
+&lt;p&gt;A developer’s first experience with Ruby will likely be through the Rails framework, along with Atom, Vim, Sublime Text and other free text editors and the command line. I remember it being hugely intimidating coming from the Java and .NET worlds where large memory hungry IDEs rule the world. I quickly adjusted to the simplicity. On one Rails development team, we had developers using every editor I just mentioned, as well as VS Code, and no one knew the difference. All tooling remained command line and encapsulated away from text editing.&lt;/p&gt;
+
+&lt;h1 id=&quot;keep-up-with-the-community&quot;&gt;Keep up with the Community&lt;/h1&gt;
+
+&lt;p&gt;Open source communities such as Ruby and Node.js move rapidly. When Textmate development stagnated, developers moved to Sublime Text if they could afford it. Developers rapidly moved to editors such as Atom as they filled the void, and developers using Vim likely stayed put and laughed. The plugin development shifted just as quickly. Having the ability to move with the community is imperative to staying current in these rapidly evolving platforms.&lt;/p&gt;
+
+&lt;h1 id=&quot;managers-and-tech-leads-take-note&quot;&gt;Managers and Tech Leads Take Note&lt;/h1&gt;
+
+&lt;p&gt;If you are considering trying to streamline and standardize on an IDE for your open source team, please take the platform into consideration. When we sit in front a screen all day, we need to be comfortable and happy with the tools we are using. Taking a Vim developer and trying to push him to Atom or vice versa likely wouldn’t work.&lt;/p&gt;
+
+&lt;p&gt;In addition, if all the plugin creators move to a given editor, we need to have the choice to move with them.&lt;/p&gt;
+
+&lt;p&gt;Instead standardize on concepts such as ensuring all projects can be built, tested, and deployed from the command line. If this goal is met, anyone can work on your code without having to learn a given IDE.&lt;/p&gt;
+
+&lt;h1 id=&quot;but-we-need-code-analysis&quot;&gt;But We Need Code Analysis&lt;/h1&gt;
+&lt;p&gt;If you introduce a static code analyzer, ensure it works from the command line, and make it work as part of your continuous integration cycle. If plugins exist for most major editors, such as with &lt;a href=&quot;https://github.com/bbatsov/rubocop&quot;&gt;RuboCop&lt;/a&gt;, then there isn’t a lot of risk involved.&lt;/p&gt;
+
+&lt;p&gt;The same principle applies other code tools such as code formatters. Doing this tasks as pre-commit tasks can ensure they are always done instead of relying on a manual operation in an IDE.&lt;/p&gt;
+
+&lt;h1 id=&quot;command-line-first-for-all-platforms&quot;&gt;Command Line First for All Platforms&lt;/h1&gt;
+
+&lt;p&gt;Regardless of your platform, keep this command-line-first mentality for tools that involve code production. It will provide developers with more options to do the best job possible. It will also ensure someone can build the source without having an IDE on their machine, which is critical in continuous integration.&lt;/p&gt;</content><author><name></name></author><summary type="html">Some platforms provide IDEs so nice that no one would consider using anything else. Open source technologies such as Ruby, Node.js, Go, and others have no killer IDE. In this post I present why the command line should be prioritized over any IDE.</summary></entry></feed>
