@@ -16,7 +16,7 @@
 title: Shawn Stephens
 email: shawn@motivatedcompany.com
 description: >
-  Thoughts on Technology and Software Development 
+  Thoughts on Technology and Software Development
   from Shawn Stephens
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -30,6 +30,8 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-autoprefixer
+
+google_analytics: UA-4566704-4
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

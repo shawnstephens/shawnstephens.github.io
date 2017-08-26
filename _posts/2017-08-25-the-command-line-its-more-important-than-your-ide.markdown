@@ -4,7 +4,7 @@ title:  "The Command Line"
 subtitle: "It's More Important than Your IDE"
 date:   2017-08-25 7:00:00 -0500
 categories: ruby
-post_list_image: /assets/images/pexels-photo-169573-post.jpg
+post_list_image: /assets/images/command-line.jpg
 ---
 
 
@@ -24,7 +24,7 @@ My statements might upset .NET or Xcode developers as they made considerable lea
 
 I can remember moving Java projects from Eclipse based IDE packaging to solely ant based automated builds. Some developers at the time simply didn't want to give up their quick IDE based incremental builds, so we often had to support both until ant and maven plugins became prevalent.
 
-A developer's first experience with Ruby will likely be through Rails. Atom, Vim, Sublime Text and other free text editors and the command line. I remember it being hugely intimidating coming from the Java and .NET worlds where large memory hungry IDEs rule the world. I quickly adjusted to the simplicity. On one Rails development team, we had developers using every editor I just mentioned, as well as VS Code, and no one knew the difference. All tooling remained command line and encapsulated away from text editing.
+A developer's first experience with Ruby will likely be through the Rails framework, along with Atom, Vim, Sublime Text and other free text editors and the command line. I remember it being hugely intimidating coming from the Java and .NET worlds where large memory hungry IDEs rule the world. I quickly adjusted to the simplicity. On one Rails development team, we had developers using every editor I just mentioned, as well as VS Code, and no one knew the difference. All tooling remained command line and encapsulated away from text editing.
 
 # Keep up with the Community
 
@@ -39,7 +39,7 @@ In addition, if all the plugin creators move to a given editor, we need to have 
 Instead standardize on concepts such as ensuring all projects can be built, tested, and deployed from the command line. If this goal is met, anyone can work on your code without having to learn a given IDE.
 
 # But We Need Code Analysis
-If you introduce a static code analyzer, ensure it works from the command line, and make it work as part of your continuous integration cycle. If plugins exist for most major editors, such as with Rubocop, then there isn't a lot of risk involved.
+If you introduce a static code analyzer, ensure it works from the command line, and make it work as part of your continuous integration cycle. If plugins exist for most major editors, such as with [RuboCop](https://github.com/bbatsov/rubocop), then there isn't a lot of risk involved.
 
 The same principle applies other code tools such as code formatters. Doing this tasks as pre-commit tasks can ensure they are always done instead of relying on a manual operation in an IDE.
 

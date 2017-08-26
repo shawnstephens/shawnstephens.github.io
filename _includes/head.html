@@ -6,6 +6,24 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@shawns02">
+  <meta name="twitter:title" content="{{ page.title }}">
+
+  {% if page.description %}
+    <meta name="twitter:description"
+      content="{{ page.meta_description }}">
+  {% else %}
+    <meta name="twitter:description"
+      content="{{ page.excerpt | strip_html | xml_escape
+        | truncate: 200 }}">
+  {% endif %}
+
+  {% if page.post_list_image %}
+    <meta name="twitter:image"
+      content="{{ site.baseurl }}/{{ page.post_list_image }}">
+  {% endif %}
+
   <!-- <link rel="stylesheet" href="{{ "/assets/vendor/font-awesome.min.css" | relative_url }}"> -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
