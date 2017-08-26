@@ -8,7 +8,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@shawns02">
-  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:title" content="{{ page.title }}{% if page.subtitle %} {{ page.subtitle | prepend: ': ' }}{% endif %}">
 
   {% if page.description %}
     <meta name="twitter:description"
@@ -21,7 +21,10 @@
 
   {% if page.post_list_image %}
     <meta name="twitter:image"
-      content="{{ site.baseurl }}/{{ page.post_list_image }}">
+      content="{{ page.post_list_image }}">
+  {% else %}
+    <meta name="twitter:image"
+      content="{{ site.baseurl }}/assets/images/pexels-photo-169573-1.jpg">
   {% endif %}
 
   <!-- <link rel="stylesheet" href="{{ "/assets/vendor/font-awesome.min.css" | relative_url }}"> -->
