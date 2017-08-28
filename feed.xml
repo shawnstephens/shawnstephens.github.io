@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://shawnstephens.me/feed.xml" rel="self" type="application/atom+xml" /><link href="http://shawnstephens.me/" rel="alternate" type="text/html" /><updated>2017-08-26T11:16:21-05:00</updated><id>http://shawnstephens.me/</id><title type="html">Shawn Stephens</title><subtitle>Thoughts on Technology and Software Development from Shawn Stephens
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://shawnstephens.me/feed.xml" rel="self" type="application/atom+xml" /><link href="http://shawnstephens.me/" rel="alternate" type="text/html" /><updated>2017-08-28T09:53:01-05:00</updated><id>http://shawnstephens.me/</id><title type="html">Shawn Stephens</title><subtitle>Thoughts on Technology and Software Development from Shawn Stephens
 </subtitle><entry><title type="html">The Command Line</title><link href="http://shawnstephens.me/ruby/2017/08/26/the-command-line-its-more-important-than-your-ide.html" rel="alternate" type="text/html" title="The Command Line" /><published>2017-08-26T10:00:00-05:00</published><updated>2017-08-26T10:00:00-05:00</updated><id>http://shawnstephens.me/ruby/2017/08/26/the-command-line-its-more-important-than-your-ide</id><content type="html" xml:base="http://shawnstephens.me/ruby/2017/08/26/the-command-line-its-more-important-than-your-ide.html">&lt;p&gt;Some platforms provide IDEs so nice that no one would consider using anything else. Open source technologies such as Ruby, Node.js, Go, and others have no killer IDE. In this post I present why the command line should be prioritized over any IDE.&lt;/p&gt;
 
 &lt;h1 id=&quot;platform-concerns&quot;&gt;Platform Concerns&lt;/h1&gt;
@@ -32,7 +32,7 @@
 &lt;h1 id=&quot;but-we-need-code-analysis&quot;&gt;But We Need Code Analysis&lt;/h1&gt;
 &lt;p&gt;If you introduce a static code analyzer, ensure it works from the command line, and make it work as part of your continuous integration cycle. If plugins exist for most major editors, such as with &lt;a href=&quot;https://github.com/bbatsov/rubocop&quot;&gt;RuboCop&lt;/a&gt;, then there isn’t a lot of risk involved.&lt;/p&gt;
 
-&lt;p&gt;The same principle applies other code tools such as code formatters. Doing this tasks as pre-commit tasks can ensure they are always done instead of relying on a manual operation in an IDE.&lt;/p&gt;
+&lt;p&gt;The same principle applies other code tools such as code formatters. Doing these tasks as pre-commit tasks can ensure they are always done instead of relying on a manual operation in an IDE.&lt;/p&gt;
 
 &lt;h1 id=&quot;command-line-first-for-all-platforms&quot;&gt;Command Line First for All Platforms&lt;/h1&gt;
 
