@@ -41,7 +41,7 @@ Instead standardize on concepts such as ensuring all projects can be built, test
 # But We Need Code Analysis
 If you introduce a static code analyzer, ensure it works from the command line, and make it work as part of your continuous integration cycle. If plugins exist for most major editors, such as with [RuboCop](https://github.com/bbatsov/rubocop), then there isn't a lot of risk involved.
 
-The same principle applies other code tools such as code formatters. Doing these tasks as pre-commit tasks can ensure they are always done instead of relying on a manual operation in an IDE.
+The same principle applies other code tools such as code formatters. Doing these tasks as pre-commit tasks instead of relying on a manual operation in an IDE can ensure they are always done.
 
 # Command Line First for All Platforms
 
