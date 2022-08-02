@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex; /* or inline-flex */
+            justify-content: space-evenly; 
+            flex-wrap: wrap;
+            align-content: center; 
+            overflow: auto;
+            row-gap: 1vh;
+        }
+        
+        .responsive-iframe {
+          aspect-ratio: 16/9;
+          min-width: 49%;
+          border: none;
+        }
+
+        @media only screen and (orientation: portrait) {
+            .responsive-iframe {
+                height: 30vh;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <iframe loading="lazy" class="responsive-iframe" src="https://g1.ipcamlive.com/player/player.php?alias=firstst&amp;autoplay=1&amp;autostopaftersec=86400" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+        <iframe loading="lazy" class="responsive-iframe" src="https://g1.ipcamlive.com/player/player.php?alias=prospertrl&amp;autoplay=1&amp;autostopaftersec=86400" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+        <iframe loading="lazy" class="responsive-iframe" src="https://g1.ipcamlive.com/player/player.php?alias=frontierpk&amp;autoplay=1&amp;autostopaftersec=86400" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+    </div>
+</body>
+</html>
