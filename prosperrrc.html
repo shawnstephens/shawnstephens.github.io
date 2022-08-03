@@ -14,16 +14,36 @@
             overflow: auto;
             row-gap: 1vh;
         } 
+
+        .holder {
+            aspect-ratio: 16/9;
+            width: 100;
+        }
+
+        .label {
+            position: absolute;
+            top: 10;
+            z-index: 2;
+            color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+        }
         
         .responsive-iframe {
           aspect-ratio: 16/9;
-          min-width: 49%;
+          width: 100%;
           border: none;
         }
 
         @media only screen and (orientation: portrait) {
-            .responsive-iframe {
+            .holder {
                 height: 29vh;
+            }
+        }
+
+        @media only screen and (orientation: landscape) {
+            .holder {
+                width: 49%;
             }
         }
 
@@ -32,13 +52,23 @@
                 background-color: black;
             }
         }
+
     </style>
 </head>
 <body>
     <div class="container"> 
-        <iframe loading="lazy" class="responsive-iframe" src="https://g1.ipcamlive.com/player/player.php?alias=firstst&amp;autoplay=1&amp;autostopaftersec=86400" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
-        <iframe loading="lazy" class="responsive-iframe" src="https://g1.ipcamlive.com/player/player.php?alias=prospertrl&amp;autoplay=1&amp;autostopaftersec=86400" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
-        <iframe loading="lazy" class="responsive-iframe" src="https://g1.ipcamlive.com/player/player.php?alias=frontierpk&amp;autoplay=1&amp;autostopaftersec=86400" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+        <div class="holder">
+            <div class="label">First St</div>
+            <iframe loading="lazy" class="responsive-iframe" src="https://g1.ipcamlive.com/player/player.php?alias=firstst&amp;autoplay=1&amp;autostopaftersec=86400" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+        </div>
+        <div class="holder">
+            <div class="label">Prosper Trl</div>
+            <iframe loading="lazy" class="responsive-iframe" src="https://g1.ipcamlive.com/player/player.php?alias=prospertrl&amp;autoplay=1&amp;autostopaftersec=86400" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+        </div>
+        <div class="holder">
+            <div class="label">Frontier Pkwy</div>
+            <iframe loading="lazy" class="responsive-iframe" src="https://g1.ipcamlive.com/player/player.php?alias=frontierpk&amp;autoplay=1&amp;autostopaftersec=86400" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+        </div>
     </div>
 </body>
 </html>
